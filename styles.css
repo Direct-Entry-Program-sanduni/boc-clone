@@ -8,6 +8,12 @@
 .clear-fix{
     clear: both;
 }
+
+.clear-fix::after{
+    display: block;
+    content: " ";
+    clear: both;
+}
 /*Typography*/
 h1{
     font-size: 2rem;
@@ -33,4 +39,634 @@ h6{
     font-size: 0.8rem;
     line-height: 1rem;
 }
+/*Layout*/
+#app-row{
+    /* background-color: gold; */
+    height: 80px;
+}
+#nav-row{
+    background-color: #231f20;
+    
+}
+#misc-row{
+    text-align: right;
+    background-color: yellow;
+}
+.container{
+    /* background-color: blue; */
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
 
+}
+
+img{
+    height: 60px;
+}
+
+#app-row>.container>.wrapper{
+    float: right;
+    /* background-color: aqua; */
+    /* width: 70%; */
+    height: 100%;
+}
+#app-row>.container>.wrapper>.row:first-child{
+    /* background-color: white; */
+}
+#app-row>.container>.wrapper>.row:last-child{
+    /* background-color: rgb(45, 65, 15); */
+    padding-top: 10px;
+}
+#nav-lang{
+    float: right;
+}
+#nav-lang li{
+    float: left;
+    padding-left: 20px;
+}
+
+nav>li>a{
+    color: black;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+#nav-lang li a:hover{
+    color: #ff9d1e;
+    cursor: pointer;
+    text-decoration: underline;
+}
+#main-nav{
+    float: left;
+    padding-top: 10px;
+}
+#smi-container{
+    float: right;
+    /* background-color: rgb(123, 235, 48); */
+}
+#main-nav li{
+    float: left;
+    padding: 0 15px;
+}
+#smi-container ul li{
+    float: left;
+    padding: 5px;
+    margin-left: 8px;
+}
+#main-nav li a{
+    padding-right: 15px;
+}
+#main-nav li a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+#smi-container ul li ion-icon{
+    background-color: transparent;
+    color: white;
+    font-size: 1.2rem;
+}
+#smi-container ul li:nth-child(1){
+    background-color:#3f4da1;
+}
+#smi-container ul li:nth-child(2){
+    background-color: #57a0d7;
+}
+#smi-container ul li:nth-child(3){
+    background-color: #57a0d7;
+}
+#smi-container ul li:nth-child(4){
+    background-color:#d74527 ;
+}
+#nav-row nav li{
+    float: left;
+    
+}
+#nav-row nav li a{
+    position: relative;
+    display: inline-block;
+    color: white;
+    padding: 15px;
+}
+#nav-row nav li a:hover::after{
+    position: absolute;
+    display: block;
+    content: "";
+    border-top: 6px solid #ff9d1e;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+
+}
+#nav-row nav li a:hover{
+    background-color: #ff9d1e;
+    color: black;
+    text-decoration: none;
+}
+#misc-row button{
+    background-color: #107cce;
+    color: white;
+    border-radius: 4px;
+    border-bottom: 2px solid #0f027b;
+    height: 40px;
+    margin: 4px 0;
+    padding: 0 10px;
+    line-height: 40px;
+    font-size: 0.8rem;
+
+}
+#misc-row button:hover{
+    background-color: #086599;
+}
+
+/*footer*/
+ #copyright-row{
+    background-color: #ffde00;
+
+ }
+footer .row{
+    background-color: #808285;
+}
+#copyright-row>.container{
+    padding: 16px 0;
+    color: #1f1f1f;
+    font-size: 0.7rem;
+    
+}
+footer>.row .col{
+    float: left;
+    width: 25%;
+    height: 215px;
+    padding-top: 10px;
+}
+footer>.row .col h3{
+    padding-bottom: 16px;
+    color: white;
+}
+footer>.row .col nav li{
+    line-height: 1.2rem;
+}
+footer>.row .col nav li a:hover{
+    color: #ff9d1e;
+}
+footer>.row .col nav li a{
+    font-size: 0.75rem;
+    color: white;
+}
+footer>.row .col nav:last-child p{
+    padding-bottom: 8px;
+    color: white;
+    font-size: 0.75rem;
+    line-height: 1.1rem;
+}
+footer>.row .col p{
+    color: white;
+    font-size: 0.75rem;
+    line-height: 1.1rem;
+
+}
+footer>.row .col:last-child{
+    padding-left: 15px;
+    background-color: #515254;
+    position: relative;
+    z-index: 1;
+}
+#tel-2{
+    padding-left: 27px;
+}
+footer>.row .col:last-child{
+    background-color: #515254;
+    
+}
+footer>.row{
+    position: relative;
+    z-index: 0;
+
+}
+footer>.row::after{
+    display: block;
+    content: "";
+    background-color: #515254;
+    position: absolute;
+    width: 25%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+/*Aside */
+aside{
+    font-weight: bold;
+    background-color: black;
+    position: fixed;
+    padding: 10px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+   
+    transform: rotate(270deg);
+    right: -38px;
+    bottom: 25%;
+    z-index: 99999;
+
+}
+aside a{
+    text-decoration: none;
+    color: white;
+    
+}
+aside a ion-icon{
+    color: black;
+    font-size: 1rem;
+    /* padding-right: 10px; */
+    vertical-align: middle;
+}
+#bubble-wrapper{
+    position: relative;
+    display: inline-block;
+    background-color: yellow;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    padding: 4px;
+
+}
+aside:hover{
+   right: -35px;
+}
+#bubble-wrapper::before{
+    background-color: rgba(240, 240, 62, 0.486);
+    display: block;
+    content: "";
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border-radius: 100%;
+    width: 5px;
+    height: 5px;
+    animation-name: wave;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes wave{
+    from{
+        transform: scale(0);
+        opacity: 1;
+    }
+    to{
+        transform: scale(15);
+        opacity: 0.5;
+    }
+}
+/* main */
+main .row:first-child{
+    height: 90px;
+}
+
+main .row:first-child>.container>.col{
+    padding: 20px 10px 0;
+    height: 100%;
+}
+main .row:first-child>.container>.col:first-child{
+    width: 75%;
+    float: left;
+}
+main .row:first-child>.container>.col:last-child{
+    width: 25%;
+    float: right;
+}
+main .row:first-child>.container>.col:first-child>ul li{
+    width: 20%;
+    float: left;
+    text-align: right;
+}
+main .row:first-child>.container>.col:first-child>ul li h4{
+    text-align: left;
+    font-size: 18px;
+}
+main .row:first-child>.container>.col:first-child>ul li a{
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+}
+main .row:first-child>.container>.col:first-child>ul li a img{
+    height: 39px;
+    border: 3px solid transparent;
+}
+main .row:first-child>.container>.col:first-child>ul li a:hover img{
+    border: 3px solid #ffde00;
+    text-decoration: underline;
+    cursor: pointer;
+}
+main .row:first-child>.container>.col:first-child>ul li a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+main .row:first-child>.container>.col:first-child>ul li .country-code{
+    display: block;
+    padding-top: 10px;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+main>.row:nth-child(2)>.container>.col{
+    float: left;
+    padding-top: 20px;
+   
+}
+main>.row:nth-child(2)>.container>.col:first-child{
+    background-color: red;
+    width: 75%;
+
+   
+}
+main>.row:nth-child(2)>.container>.col:last-child{
+    width: 25%;
+}
+main>.row:nth-child(2)>.container>.col:last-child svg{
+    height: 30px;
+}
+main>.row:nth-child(2)>.container>.col:last-child>ul{
+    border-top: 1px solid #ececec;
+}
+main>.row:nth-child(2)>.container>.col:last-child>ul>li{
+    display: table;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #ccc;
+    /* padding: 10px 10px 10px 20px; */
+}
+main>.row:nth-child(2)>.container>.col:last-child>ul>li:hover{
+    background-color: #525252;
+    
+}
+main>.row:nth-child(2)>.container>.col:last-child>ul>li>a{
+    text-decoration: none;
+    display: table-row;
+    color: black;
+
+}
+main>.row:nth-child(2)>.container>.col:last-child>ul>li> a:hover{
+    color: #ff9d1e;
+}
+main>.row:nth-child(2)>.container>.col:last-child>ul>li>:hover svg{
+    fill: #ff9d1e;
+}
+
+main>.row:nth-child(2)>.container>.col:last-child>ul>li>a>div{
+    display: table-cell;
+    padding: 10px 10px 10px 20px;
+    vertical-align: middle;
+    line-height: 1.1rem;
+}
+main>.row:nth-child(2)>.container>.col:last-child>ul>li>a>div:first-child{
+    width: 90%;
+}
+#slider{
+    /* position: relative; part 2*/
+    padding: 0 10px;
+    margin-top: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    width: 850px;
+    /* height: 388px;
+    overflow-y: hidden; */
+    
+}
+/* #sliders-wrapper{
+    height: 100%;
+    overflow: hidden;
+    
+    
+} */
+.slide{
+    /* position: absolute;  part 2*/
+    position: relative;
+    background-repeat: no-repeat;
+    height: 388px;
+    background-size: contain;
+    background-position: center;
+    display: inline-block;
+    scroll-snap-align: center;
+    /* float: left; */
+    width: 850px;
+}
+.slide .prev, .slide .next{
+    position: absolute;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+    background-color: rgba(128, 130, 133, 0.9);
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 100%;
+}
+.slide .prev:hover, .slide .next:hover{
+    background-color:rgba(128, 130, 133, 0.8); ;
+}
+
+.slide .prev{
+    left: 10px;
+}
+.slide .next{
+    right: 10px;
+}
+.slide ion-icon{
+    color: black;
+    vertical-align: sub;
+}
+
+#slider-1{
+    background-image: url('https://boc.lk/image/data/Banner/200Day_investment-2022-Sept-Web.jpg');
+}
+#slider-2{
+    /* left: 100%; part 2 */
+    background-image: url('https://boc.lk/image/data/Banner/Pita-pita_season-3-2022-E.jpg');
+}
+#slider-3{
+    /* left: 300%; part 2 */
+    background-image: url('https://boc.lk/image/data/Banner/SDA-2022-09.jpeg');
+}
+#slider-4{
+     /* left: 400%; part 2 */
+    background-image: url('https://boc.lk/image/data/Banner/Top1000_2022-En_1.jpg');
+}
+#slider-5{
+     /* left: 500%; part 2 */
+    background-image: url('https://boc.lk/image/data/Banner/green-loan-2022.jpeg');
+}
+#slider-6{
+     /* left: 600%; part 2 */
+   background-image: url('https://boc.lk/image/data/Banner/power-branch-close-2022-En-1.jpg'); 
+}
+#slider-wrapper{
+    width: 100%;
+    position: relative;
+    animation-name: slider-animation;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes slider-animation {
+    0%, 16%{
+        left: 0;
+    }
+    16%, 26%{
+        left: -100%;
+    }
+    32%, 58%{
+        left: -200%;
+    }
+    64%, 75%{
+        left: -300%
+    }
+    82%, 94%{
+        left: -400%;
+    }
+    100%{
+        left: -500%;
+    }
+    
+}
+main>.row:nth-child(3){
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+main>.row:nth-child(3)>.container>.col{
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+main>.row:nth-child(3)>.container>.col>.wrapper{
+    overflow: hidden;
+    position: relative;
+}
+main>.row:nth-child(3)>.container>.col>.wrapper>.overlay{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0,0.7);
+}
+main>.row:nth-child(3)>.container>.col:hover .overlay{
+    display: block;
+}
+
+main>.row:nth-child(3)>.container>.col img{
+    width: 100%;
+    height: 180px;
+    display: block;
+    transition: transform 500ms;
+    
+}
+main>.row:nth-child(3)>.container>.col:hover img{
+    transform: scale(1.2);
+
+}
+main>.row:nth-child(3)>.container>.col .topic{
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    background-color: #525252;
+}
+main>.row:nth-child(3)>.container>.col:hover .topic{
+    color: #1f1f1f;
+    background-color:yellow;
+}
+main>.row:nth-child(4){
+    padding-bottom: 20px;
+}
+main>.row:nth-child(4)>.container>.col{
+    float: left;
+}
+main>.row:nth-child(4)>.container>.col:nth-child(1){
+    width: 25%;
+    padding: 10px;
+    text-align: right;
+    color: #1f1f1f;
+    
+}
+main>.row:nth-child(4)>.container>.col:nth-child(2){
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    
+}
+main>.row:nth-child(4)>.container>.col:nth-child(3){
+    width: 25%;
+    padding: 10px;
+}
+main>.row:nth-child(4)>.container>.col:nth-child(1) p:first-child{
+    font-size: 18px;
+    padding-bottom: 15px;
+}
+main>.row:nth-child(4)>.container>.col:nth-child(1) p:last-child{
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+main>.row:nth-child(4)>.container>.col:nth-child(1) p:last-child ion-icon{
+    color: #8a8a8a;
+    padding-right: 15px;
+}
+main>.row:nth-child(4)>.container>.col:nth-child(3) p:first-child{
+    text-align: right;
+    font-size: 20px;
+
+}
+main>.row:nth-child(4)>.container>.col:nth-child(3) p:last-child{
+    font-size: 0.7rem;
+    text-align: right;
+    color: #8a8a8a;
+    padding-top: 20px;
+}
+#popup{
+    position: fixed;
+    left: 10px;
+    bottom: 40px;
+    width: 450px;
+    background-color: #8a8a8a;
+    opacity: 0.8;
+    z-index: 999;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 1px #000000ab;
+}
+#popup p{
+    padding-top: 35px;
+    line-height: 1.2rem;
+    font-size: 0.9rem;
+}
+#close-wrapper{
+    position: absolute;
+    padding: 5px 0;
+    cursor: pointer;
+}
+#close-wrapper:hover{
+    color: white;
+}
+#close-wrapper ion-icon{
+    vertical-align: sub;
+    margin-right: 5px;
+    background-color: red;
+    border-radius: 100%;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
